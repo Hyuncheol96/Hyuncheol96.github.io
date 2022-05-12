@@ -7,31 +7,37 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        .sign1 {
+            color: aqua;
+        }
+    </style>
 </head>
 <body>
     <table>
         <tr>
           <td><img alt="" style="display: block; margin: 0 auto" width="630" height="965" src="images/banner.jpg" /></td>
           <td>
-    <div class="container">
-        ID<br><input type="text" size="80" id="userId" onblur="userId()" class="from-control"  placeholder="ID를 만들어주세요 띄어쓰기 없이 영/숫자 6-10자"><i id="idIcon-result" class="bi bi-tags-fill"></i><p id="check-result"></p>
+    <div class="container" style="color: #5233db;">  
+        <h2 id="sign1">회원가입</h2>
+        <i id="idIcon-result" class="bi bi-tags-fill"></i> ID<br><input type="text" size="80" id="userId" onblur="userId()" class="from-control"  placeholder="ID를 만들어주세요 띄어쓰기 없이 영/숫자 6-10자"><p id="check-result"></p>
         <p id="userId-result"></p>
-        Password<br><input type="password" size="80" id="pw" onblur="pw()" class="from-control"  placeholder="비밀번호 입력 8-15자의 영문 대소문자, 숫자, 특수문자(-_!#$) 조합"><i id="pwIcon-result" class="bi bi-tags-fill"></i>
+        <i id="pwIcon-result" class="bi bi-tags-fill"></i>Password<br><input type="password" size="80" id="pw" onblur="pw()" class="from-control"  placeholder="비밀번호 입력 8-15자의 영문 대소문자, 숫자, 특수문자(-_!#$) 조합">
         <p id="pw-result"></p>
-        PasswordCheck<br><input type="password" size="80" id="pwCheck" onblur="pwCheck()" class="from-control"  placeholder="위의 비밀번호를 다시 입력해주세요."><i id="pwcIcon-result" class="bi bi-tags-fill"></i>
+        <i id="pwcIcon-result" class="bi bi-tags-fill"></i> PasswordCheck<br><input type="password" size="80" id="pwCheck" onblur="pwCheck()" class="from-control"  placeholder="위의 비밀번호를 다시 입력해주세요.">
         <p id="pwCheck-result"></p>
-        Name<br><input type="text" size="80" id="userName" onblur="userName()" class="from-control"  placeholder="이름"><i id="unIcon-result" class="bi bi-tags-fill"></i><br>
+        <i id="unIcon-result" class="bi bi-tags-fill"></i> Name<br><input type="text" size="80" id="userName" onblur="userName()" class="from-control"  placeholder="이름"><br>
         <p id="userName-result"></p>
-        MobileNumber<br><select name = "mobileNumber">
+        <i id="mnIcon-result" class="bi bi-tags-fill"></i> MobileNumber<br><select name = "mobileNumber">
             <option value="010">010</option>
             <option value="016">016</option>
             <option value="017">017</option>
             <option value="018">018</option>
             <option value="019">019</option>
         </select>
-        - <input type="text" size="70" id="mobileNumber" onblur="mobileNumber()" class="from-control"  placeholder="휴대폰번호입력('-'제외)"><i id="mnIcon-result" class="bi bi-tags-fill"></i><br>
+        - <input type="text" size="70" id="mobileNumber" onblur="mobileNumber()" class="from-control"  placeholder="휴대폰번호입력('-'제외)"><br>
         <p id="mobileNumber-result"></p>
-        Email<br><input type="text" size="27" id="email" onblur="email()" class="from-control"  placeholder="이메일">@
+        <i id="emailIcon-result" class="bi bi-tags-fill"></i> Email<br><input type="text" size="27" id="email" onblur="email()" class="from-control"  placeholder="이메일">@
         <input type="text" size="27" id="email2" onblur="email2()" class="from-control"  placeholder="이메일"></i>
         <select id="ck" onchange="ck()" name = "emailSelect">
             <option value="직접입력">직접입력</option>
@@ -48,7 +54,7 @@
             <option value="korea.com">korea.com</option>
             <option value="gmail.com">gmail.com</option>
             <option value="hanmir.com">hanmir.com</option>
-        </select><i id="emailIcon-result" class="bi bi-tags-fill"></i><br>
+        </select><br>
         <p id="email-result"></p>
         <input type="text" id="sample6_postcode" placeholder="우편번호">
         <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
@@ -56,7 +62,7 @@
         <input type="text" size="54" id="sample6_detailAddress" placeholder="상세주소">
         <input type="text" size="20" id="sample6_extraAddress" placeholder="참고항목"><br>
         <button class="btn btn-secondary">처음으로</button>
-        <button class="btn btn-primary">확인</button>
+        <button class="btn btn-primary">가입</button>
         
         
         </div>
@@ -127,8 +133,8 @@
         
         if(userId.match(exp)) {
             userIdResult.innerHTML = "사용 가능합니다."
-            userIdResult.style.color = "green";
-            idIconResult.style.color = "green";
+            userIdResult.style.color = "#2183d3";
+            idIconResult.style.color = "#2183d3";
         } else {
                 userIdResult.innerHTML = "영/숫자 6-10자 조합으로 입력해주세요.";
                 userIdResult.style.color = "red";
